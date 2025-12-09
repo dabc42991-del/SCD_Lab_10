@@ -10,3 +10,8 @@ def divide(a, b):
         return "Error: Division by zero"
 
 print("Division:", divide(10, 2))
+
+def multiply(a, b):
+    return a * b
+
+print("Multiplication:", multiply(2, 3))
