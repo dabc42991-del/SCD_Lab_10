@@ -20,3 +20,11 @@ def subtract(a, b):
     return a - b
 
 print("Difference:", subtract(10, 4))
+
+def mod(a, b):
+    if b != 0:
+        return a % b
+    else:
+        return "Error: Division by zero"
+
+print("Modulus:", mod(10, 3))
