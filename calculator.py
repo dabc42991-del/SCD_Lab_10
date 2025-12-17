@@ -22,9 +22,9 @@ def subtract(a, b):
 print("Difference:", subtract(10, 4))
 
 def mod(a, b):
-    if b != 0:
-        return a % b
-    else:
-        return "Error: Division by zero"
+    if b == 0:
+        raise ZeroDivisionError("Modulo by zero is not allowed")
+    return a % b
 
 print("Modulus:", mod(10, 3))
+
