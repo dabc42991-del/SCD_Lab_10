@@ -20,10 +20,24 @@ def multiply(a, b):
 
 print("Multiplication:", multiply(2, 3))
 
-def subtract(a, b):
-    return a - b
+def subtract(a, b, absolute=False):
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise TypeError("Both inputs must be numbers (int or float).")
 
-print("Difference:", subtract(10, 4))
+    result = a - b
+
+    if absolute:
+        return abs(result)
+
+    return result
+
+
+try:
+    print("Difference:", subtract(10, 4))
+    print("Absolute Difference:", subtract(4, 10, absolute=True))
+except TypeError as error:
+    print("Error:", error)
+
 
 def mod(a, b):
     if b == 0:
@@ -31,5 +45,6 @@ def mod(a, b):
     return a % b
 
 print("Modulus:", mod(10, 3))
+
 
 
