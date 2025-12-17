@@ -3,13 +3,17 @@ def add(a, b):
 
 print("Sum:", add(5, 3))
 
-def divide(a, b):
-    if b != 0:
-        return a / b
-    else:
-        return "Error: Division by zero"
-
-print("Division:", divide(10, 2))
+'''updated code with exception'''
+def divide(num1, num2):
+    if num2 == 0:
+        raise ZeroDivisionError("Division by zero is not allowed")
+    return num1 / num2
+'''usage example'''
+try:
+    result = divide(10, 0)
+    print(result)
+except ZeroDivisionError as e:
+    print(e)
 
 def multiply(a, b):
     return a * b
@@ -27,4 +31,5 @@ def mod(a, b):
     return a % b
 
 print("Modulus:", mod(10, 3))
+
 
